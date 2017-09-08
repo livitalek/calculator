@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "function.c"
+//#include "function.c"
 
 int main(int argc, char **argv) {
 	char chMenu;
-	bool flgMenu = true;
+	bool flagMenu = true;
 	while (flagMenu) {
+		printf("1 - Begin\n2 - Help\n3 - Exit\n");
 		chMenu = getchar();
-		printf("1 - Begin/n2 - Help/n3 - Exit")
 		switch (chMenu) {
 		case '1':
 			break;
@@ -18,6 +18,9 @@ int main(int argc, char **argv) {
 		case 27:
 			flagMenu = false;
 			break;
+		default:
+			break;
 		}
 	}
+	return 0;
 }

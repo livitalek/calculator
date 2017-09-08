@@ -1,4 +1,4 @@
-#include "calculator.h"
+#include "function.h"
 
 float myplus(float numb1, float numb2) {
 	numb1 += numb2;
