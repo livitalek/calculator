@@ -1,5 +1,5 @@
-#ifndef H_CALCULATOR
-#define H_CALCULATOR
+#ifndef H_FUNCTION
+#define H_FUNCTION
 
 float myplus(float numb1, float numb2);
 float myminus(float numb1, float numb2);
