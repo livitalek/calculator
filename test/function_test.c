@@ -150,3 +150,72 @@ CTEST(test_function_mydivision, test3) {
 	const float expected = a / b;
 	ASSERT_DBL_NEAR(expected, suite);
 }
+
+CTEST(test_function_mypower, test1) {
+	const float a = 2;
+	const int b = 10;
+	
+	const float suite = mypower(a, b);
+	
+	float expa = 1;
+	int expb = b;
+	if (expb > 0) {
+		while (expb != 0) {
+			expa *= a;
+			expb--;
+		}
+	} else if (expb < 0) {
+		while (expb != 0) {
+			expa /= a;
+			expb++;
+		}
+	}
+	const float expected = expa;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mypower, test2) {
+	const float a = -0.2;
+	const int b = -10;
+	
+	const float suite = mypower(a, b);
+	
+	float expa = 1;
+	int expb = b;
+	if (expb > 0) {
+		while (expb != 0) {
+			expa *= a;
+			expb--;
+		}
+	} else if (expb < 0) {
+		while (expb != 0) {
+			expa /= a;
+			expb++;
+		}
+	}
+	const float expected = expa;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mypower, test3) {
+	const float a = 0.12456;
+	const int b = 0;
+	
+	const float suite = mypower(a, b);
+	
+	float expa = 1;
+	int expb = b;
+	if (expb > 0) {
+		while (expb != 0) {
+			expa *= a;
+			expb--;
+		}
+	} else if (expb < 0) {
+		while (expb != 0) {
+			expa /= a;
+			expb++;
+		}
+	}
+	const float expected = expa;
+	ASSERT_DBL_NEAR(expected, suite);
+}
