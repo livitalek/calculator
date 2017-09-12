@@ -90,3 +90,63 @@ CTEST(test_function_myminus, test5) {
 	const float expected = -1;
 	ASSERT_DBL_NEAR(expected, suite);
 }
+
+CTEST(test_function_mymultiplication, test1) {
+	const float a = 2;
+	const float b = 3;
+	
+	const float suite = mymultiplication(a, b);
+	
+	const float expected = 6;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mymultiplication, test2) {
+	const float a = 1;
+	const float b = 2;
+
+	const float suite = mymultiplication(a, b);
+	
+	const float expected = 2;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mymultiplication, test3) {
+	const float a = 0;
+	const float b = 1341123;
+	
+	const float suite = mymultiplication(a, b);
+	
+	const float expected = 0;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mydivision, test1) {
+	const float a = 1;
+	const float b = 3;
+	
+	const float suite = mydivision(a, b);
+
+	const float expected = a / b;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mydivision, test2) {
+	const float a = -1;
+	const float b = -5;
+	
+	const float suite = mydivision(a, b);
+	
+	const float expected = a / b;
+	ASSERT_DBL_NEAR(expected, suite);
+}
+
+CTEST(test_function_mydivision, test3) {
+	const float a = 500;
+	const float b = 7;
+	
+	const float suite = mydivision(a, b);
+	
+	const float expected = a / b;
+	ASSERT_DBL_NEAR(expected, suite);
+}
