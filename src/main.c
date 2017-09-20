@@ -43,22 +43,22 @@ void calculatorBegin() {
 		system("clear");
 		switch (chIntoNumb) {
 		case '+':
-			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, myplus(numb1, numb2));
+			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, calculatorPlus(numb1, numb2));
 			break;
 		case '-':
-			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, myminus(numb1, numb2));
+			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, calculatorMinus(numb1, numb2));
 			break;
 		case '*':
-			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, mymultiplication(numb1, numb2));
+			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, calculatorMultiplication(numb1, numb2));
 			break;
 		case '/':
-			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, mydivision(numb1, numb2));
+			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, calculatorDivision(numb1, numb2));
 			break;
 		case '^':
-			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, mypower(numb1, numb2));
+			printf("%.2f %c %.2f = %.2f\n", numb1, chIntoNumb, numb2, calculatorPower(numb1, numb2));
 			break;
 		default:
-			printf("ERROE\n");
+			printf("ERROR\n");
 			break;
 		}
 		chCalcBegin = getchar();
@@ -77,11 +77,11 @@ void calculatorHelp() {
 		printf("Help in program 'Calculator'\n");
 		printf("Data input: <number 1> character <number 2>\n");
 		printf("Characters:\n");
-		printf("\t+ - scaling\n");
-		printf("\t- - subtraction\n");
+		printf("\t+ - plus\n");
+		printf("\t- - minus\n");
 		printf("\t* - multiplication\n");
 		printf("\t/ - division\n");
-		printf("\t^ - degree\n");
+		printf("\t^ - power\n");
 		chCalcHelp = getchar();
 		if (chCalcHelp == 27) {
 			flagCalcHelp = false;
