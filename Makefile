@@ -39,11 +39,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 test: all $(TEST_OBJ_DIR) $(TEST_EXE) $(TEST_SRC)
 
 $(TEST_EXE): $(TEST_OBJ) $(patsubst build/src/main.o, ,$(OBJ))
-	$(CF_TEST) $^ -o $@
+	$(CF_TEST) $^ -o $@ -lm
 
-$(TEST_OBJ_DIR)/%.o: $(TEST_SRC_DIR)/%.c
-	$(CF_TEST) $^ -c -o $@
-	$(CF_TEST) $^ -MM > $(TEST_OBJ_DIR)/$*.d
+$(TEST_OBJ_DIR)/%.o: $(TEST_SRC_DIR)/%.c 
+	$(CF_TEST) $^ -c -o $@ -lm
+	$(CF_TEST) $^ -MM > $(TEST_OBJ_DIR)/$*.d -lm
 
 
 clean:
